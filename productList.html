@@ -13,6 +13,8 @@
 <body>
 
     <div id="productListPage">
+
+
         <!-- Header -->
         <nav id="header">
             <div class="container">
@@ -33,22 +35,23 @@
         </nav>
 
 
-
+        <!-- Product list of each type of category  -->
         <div class="container">
             <div class="row">
-                <h2 class="product-list-title text-center">All Products</h2>
-                <div class="product-list-wrapper d-flex flex-row">
 
-                    <!-- Sidebar  -->
+                <h2 class="product-list-title text-center">All Products</h2>
+
+                <div class="product-list-wrapper d-flex  flex-row justify-content-start">
+                    <!-- Sidebar -->
                     <div class="product-list-sidebar d-flex flex-column">
 
-
-                        <div class="sidebar-title">Search Products</div>
+                        <!-- Search Products -->
+                        <div class="sidebar-title fw-bold">Search Products</div>
                         <div class="sidebar-search form-group">
-                            <input type="text" placeholder="Search By Name" class="form-control" id="searchInput">
+                            <input type="text" placeholder="Search by name" class="form-control" id="searchInput">
                         </div>
 
-
+                        <!-- Categories -->
                         <div class="sidebar-title fw-bold">Categories</div>
                         <div id="categoryList">
                             <a href="#" class="d-flex text-decoration-none">MEN</a>
@@ -62,54 +65,178 @@
 
 
 
-                        <div class="sidebar-title">Filter by Price</div>
+                        <!-- Filter by price -->
+                        <div class="sidebar-title fw-bold">Filter by Price</div>
                         <div class="price-filter">
 
                             <div class="price-filter-select d-flex flex-row justify-content-between">
 
-                                <div class="form-group">
+                                <div class="form-group me-3">
                                     <select name="minPrice" class="form-select" id="minPrice">
                                         <option value="0">0</option>
-                                        <option value="1000">1000</option>
-                                        <option value="2000">2000</option>
-                                        <option value="5000">5000</option>
-                                        <option value="10000">10000</option>
-                                        <option value="20000">20000</option>
+                                        <option value="1000">1,000</option>
+                                        <option value="2000">2,000</option>
+                                        <option value="5000">5,000</option>
+                                        <option value="10000">10,000</option>
+                                        <option value="20000">20,000</option>
                                     </select>
+                                    <label for="minPrice" class="form-label">Min Price</label>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group ">
                                     <select name="maxPrice" class="form-select" id="maxPrice">
                                         <option value="0">0</option>
-                                        <option value="1000">1000</option>
-                                        <option value="2000">2000</option>
-                                        <option value="5000">5000</option>
-                                        <option value="10000">10000</option>
-                                        <option value="20000">20000</option>
-                                        <option value="100000">100000</option>
+                                        <option value="1000">1,000</option>
+                                        <option value="2000">2,000</option>
+                                        <option value="5000">5,000</option>
+                                        <option value="10000">10,000</option>
+                                        <option value="20000">20,000</option>
+                                        <option value="100000">1,00,000</option>
                                     </select>
+                                    <label for="maxPrice" class="form-label">Max Price</label>
+
                                 </div>
 
                             </div>
 
-                            <div class="price-filter-title d-flex flex-row justify-content-between">
-                                <div id="price-filter-label-min">Min Price</div>
-                                <div id="price-filter-label-max">Max Price</div>
-                            </div>
+
+                            <!-- I have directly used the label name in form group div. -->
+                            <!-- <div class="price-filter-title d-flex flex-row justify-content-between">
+                                <div>Min Price</div>
+                                <div>Max Price</div>
+                            </div> -->
                         </div>
 
                         <button class="btn btn-danger clear-filter" id="clear">Clear filter</button>
                     </div>
-                    <div id="productList" class="product-list-box">
 
+                    <div id="productList" class="product-list-box">
+                        <!-- Add list of products -->
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/1_288da67a-34bf-4fb9-b527-5117b652abff.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">FLASH White Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,309.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,799.00</del></span>
+                            </div>
+                        </a>
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/CAMP-DRAX-22G-952-BLK-D.GRY_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">Drax Black Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,009.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,699.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/CAMP-NEO-22G-944-NAVY-P.GRN_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">NEO Navy Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,209.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,759.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/CAMP-SPECTER_22G-947_NAVY-RED_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">Specter Navy  Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,359.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,699.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/EDWORD-22G-137-MSTD-BLK_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">Edword Black Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,499.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,999.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/MARVRICK_WHT-R.SLATE_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">Marvrick Slate Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,209.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,699.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/OG-04_OG-04_WHT-BLK_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">OG-04 White Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,509.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,899.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/OG-26_WHT-D.GRN_3_720x.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">OG-26 White Men's Sneakers</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,639.00</span>
+                                <span class="ps-3">M.R.PRs. <del>2,399.00</del></span>
+                            </div>
+                        </a>
+
+
+                        <a href="productDetails.html" target="_blank"
+                            class="product-item text-decoration-none d-inline-block">
+                            <div class="product-img">
+                                <img src="img/WENDIGO_22G-1211_BLK-D.GRY_2.webp" alt="">
+                            </div>
+                            <div class="product-name text-center">WENDIGO Black Men's Shoes</div>
+                            <div class="product-price text-center">
+                                <span class="fw-bold">PRICE Rs. 1,009.00</span>
+                                <span class="ps-3">M.R.PRs. <del>1,399.00</del></span>
+                            </div>
+                        </a>
                     </div>
+
                 </div>
             </div>
+
+
+
         </div>
     </div>
-
-
-
     </div>
 
 

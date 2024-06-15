@@ -1,6 +1,8 @@
-
-#price-filter-label-min ,#price-filter-label-max{
-    flex-basis: 50%;
+.price-filter-select .form-group{
+    max-width: 70px;
+}
+.price-filter-select .form-select{
+    width: 100%;
 }
 
 .product-list-title{
@@ -10,6 +12,7 @@
 }
 .product-list-sidebar{
     margin-right: 100px;
+    flex-basis: 20%;
 }
 
 .product-list-sidebar a{
@@ -33,7 +36,7 @@
     font-weight: bold;
 }
 
-.sidebar-title{
+.sidebar-title , .sidebar-search{
     margin-bottom: 0.5rem;
 }
 
@@ -41,6 +44,41 @@
     margin-top: 1rem;
 }
 
-.price-filter  .price-filter-select > div{
-margin-bottom: 0.5rem;
+.price-filter-select .form-group label{
+margin-top: 0.5rem;
+}
+
+ .product-list-box{
+    flex-basis: 80%; 
+ } 
+.product-list-box .product-item{
+    width: 30%;
+    margin-right: 1.5%;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 5px var(--light-gray);
+    padding: 0.5rem;
+}
+
+.product-list-box .product-item img{
+  max-width: 100%;
+}
+
+.product-list-box .product-item .product-name{
+    font-size: 1.2rem;
+    color: black;
+    padding: 0.3rem 0;
+}
+
+.product-list-box .product-item .product-price{
+    color: var(--jean-blue);
+    padding-bottom: 10px;
+}
+
+.product-list-box .product-item:nth-child(3n) {
+margin-right: 0;
+}
+
+.product-list-box .product-item:hover{
+    box-shadow: 0px 4px 10px var(--blue-gray);
+    transition: box-shadow  0.15s linear 0s;
 }
