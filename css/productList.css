@@ -1,0 +1,46 @@
+
+#price-filter-label-min ,#price-filter-label-max{
+    flex-basis: 50%;
+}
+
+.product-list-title{
+    font-size: 3rem;
+    margin: 40px 0;
+    font-weight: normal;
+}
+.product-list-sidebar{
+    margin-right: 100px;
+}
+
+.product-list-sidebar a{
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    color: black;
+    border-bottom: 1px solid var(--light-blue);
+    background-color: var(--sky-blue);
+}
+
+.product-list-sidebar a:last-child{
+    border-bottom: none;
+}
+
+#categoryList{
+    margin-bottom: 1rem;
+}
+
+.product-list-sidebar a:hover{
+    background-color: var(--darkSky-blue);
+    font-weight: bold;
+}
+
+.sidebar-title{
+    margin-bottom: 0.5rem;
+}
+
+#clear{
+    margin-top: 1rem;
+}
+
+.price-filter  .price-filter-select > div{
+margin-bottom: 0.5rem;
+}
