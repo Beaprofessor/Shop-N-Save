@@ -19,6 +19,8 @@
 #header {
     background-color: var(--blue-gray);
     padding: 1.2rem 0 ;
+    position:sticky;
+    top: 0;
 }
 
 #header .header-wrapper .logo{
