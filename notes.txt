@@ -1,0 +1,35 @@
+// Client and server 
+
+ Client are the end apps where the user can interact like (mobile apps , web apps........)
+ Like at the client side user will interact with UI {user interface}.
+
+Client ki baat ho toh matlab hai ki =>> Front-end
+  
+
+
+ But the server means -> any machine or computer process that serves or provides some service to other apps 
+Server ki baat ho toh matlab hai ki =>> Back-end
+
+
+There will be a set of communication that will happen between the client and server and that is your web  pages are going to communicate with these computer process or machines and these machines might be  running on your local machine ...
+for example -> you can setup a server on your local machine and you can run them on cloud machine(services like amazon , google cloud)
+
+Protocols are set of rules define for a particular type of communication on internet.
+
+When u actually open a web page or download everything the protocol is used is called is =>> HTTP(Hyper text transfer protocol)
+So in Http protocol u can send and recieve the hyper text.
+
+
+network call -> htpp call -> server call
+
+
+
+
+// API  
+
+api - application programming interface
+
+concept of API is related to contract.
+and contract exist between 2 parties where both the parties has to actually follow it.
+
+when u have a server (backend) so frontend has to get some data from backend.
