@@ -33,3 +33,6 @@ concept of API is related to contract.
 and contract exist between 2 parties where both the parties has to actually follow it.
 
 when u have a server (backend) so frontend has to get some data from backend.
+
+
+So now let's understand the concept of JSON.
