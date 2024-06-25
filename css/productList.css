@@ -59,7 +59,12 @@ margin-top: 0.5rem;
     padding: 0.5rem;
 }
 
-.product-list-box .product-item img{
+.product-img{
+    height: 400px;
+}
+
+img{
+  max-height: 100%;
   max-width: 100%;
 }
 
