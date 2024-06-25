@@ -35,4 +35,14 @@ and contract exist between 2 parties where both the parties has to actually foll
 when u have a server (backend) so frontend has to get some data from backend.
 
 
-So now let's understand the concept of JSON.
+
+
+JSON  -->>
+
+1.Javascript object notation , here notation means that it uses the nomenclature of Javascript object.
+
+2.JSON is not a js object , it just uses the syntax of the js object hence looks like a js object.
+
+3. JSON is not a Javascript object , it have different properties.
+
+4. browser api's are not json api's .
