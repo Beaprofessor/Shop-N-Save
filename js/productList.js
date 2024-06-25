@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded' , () => {
             productPrice.classList.add('product-price' , 'text-center')
 
             productName.textContent = product.title.substring(0 , 12)
-            productPrice.textContent = `&#8377${product.price}`
+            productPrice.textContent = `Rs. ${product.price}`
             
             const imageInsideProductImage = document.createElement('img')
             imageInsideProductImage.src = product.image
