@@ -16,7 +16,7 @@ async function populateCategories(){
 
 
         categoryLink.textContent = category           // setting the category name as the text of the anchor tag
-        categoryLink.href = '#'
+        categoryLink.href = `productList.html?category=${category}`
         categoryHolder.classList.add('category-item', 'd-flex' ,  'align-items-center' , 'justify-content-center')
         categoryHolder.appendChild(categoryLink)
 
