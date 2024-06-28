@@ -48,4 +48,17 @@ JSON  -->>
 4. browser api's are not json api's .
 
 
-// Tomorrow plan is to complete the project as soon as possible.
+
+Send data in http - 3 forms
+
+1. url params       -->> /brand/product/sub-product   --> Data is embedded in url directly.
+
+2. query params  -->>  ?key=value & key=value  -> post the url the set of key value pairs separated by & , and initiated by ?.
+
+3. req body  -> there are multiple components of a http , for exp -> URL , method , headers
+
+
+BOM -> Browser Object Model
+there are some browser related properties that we can access using JS. for example -> history , location-> url, frames 
+
+DOM exposes document object , and BOM exposes window object.
