@@ -1,16 +1,14 @@
 console.log("Loaded ProductList JS");
 
 document.addEventListener("DOMContentLoaded", async () => {
-
-
-    // fetching the API for all products
+  // fetching the API for all products
   async function fetchProducts() {
     const response = await axios.get("https://fakestoreapi.com/products");
     console.log(response.data);
     return response.data;
   }
 
-  // fetching the API for particular category 
+  // fetching the API for particular category
   async function fetchProductsByCategory(category) {
     const response = await axios.get(
       `https://fakestoreapi.com/products/category/${category}`
@@ -19,17 +17,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     return response.data;
   }
 
+
+  // fetching the categories..
+  async function fetchCategories() {
+    // this function is marked async so this will also return a promise
+    const response = await fetch(
+      "https://fakestoreapi.com/products/categories"
+    );
+    const data = await response.json();
+    return data;
+  }
+
   const downloadedProducts = await fetchProducts();
 
   async function popuplateProducts(flag, customProducts) {
     let product = customProducts;
-    
+
     //   queryParams for different categories
     const queryParams = new URLSearchParams(window.location.search);
     const queryParamsObject = Object.fromEntries(queryParams.entries());
     if (flag == false) {
       if (queryParamsObject["category"]) {
-        product = await fetchProductsByCategory(queryParamsObject['category']);
+        product = await fetchProductsByCategory(queryParamsObject["category"]);
       } else {
         product = await fetchProducts();
       }
@@ -72,7 +81,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // populating the categories list on the categoryList filter part
+  async function populateCtaegories() {
+    const categories = await fetchCategories();
+    const categoryList = document.getElementById("categoryList");
+    categories.forEach(category => {
+      const categoryLink = document.createElement('a');
+      categoryLink.classList.add("d-flex" , "text-decoration-none");
+      categoryLink.textContent = category;
+      categoryLink.href = `productList.html?category=${category}`
+
+      categoryList.appendChild(categoryLink);
+    });
+  }
+
   popuplateProducts(false);
+  populateCtaegories();
 
   const filterSearch = document.getElementById("search");
   filterSearch.addEventListener("click", async () => {
