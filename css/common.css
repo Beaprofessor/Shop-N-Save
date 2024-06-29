@@ -91,3 +91,9 @@
         transform: rotate(360deg);
     }
 }
+
+
+.custom-divider{
+    height: 3rem;
+    background-color: #c7ecee;
+}

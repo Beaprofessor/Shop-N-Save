@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
+
+
 <body>
+
+    <!-- lOADER -->
+
     <div class=" loader-backdrop" id="loader-backdrop">
         <div class="loader">
             <div>
@@ -26,15 +31,27 @@
             <div class="container">
                 <div class="row">
                     <div class="header-wrapper d-flex justify-content-between">
+
                      <!--  I have made this div flex , with justify content as space between -->
-                       <div class="logo d-inline-block">
-                        <a href="index.html" class="text-decoration-none">Shop Cart</a>
+                       
+                      <div class="logo d-inline-block">
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          </form>
+                      </div>
+
+                      <!--  Logo or brandName -->
+                       <div class="logo">
+                        <a href="index.html" class="text-decoration-none " >Shop Cart</a>
                        </div>
-                       <div class="user-actions d-flex flex-row">
-                        <a href="cart.html" class="">Cart</a>
-                        <div class="user-intro" id="userIntro">Hi user</div>
-                        <div class="logout-btn" id="logoutBtn">Logout</div>
+
+                       <!-- Navbar items -->
+                       <div class="user-actions d-flex flex-row justify-content-center">
+                           <a href="cart.html" class="">Cart</a>
+                           <div class="user-intro" id="userIntro">Hi user</div>
+                            <div class="logout-btn" id="logoutBtn">Logout</div>
                        </div>
+
                     </div>
                 </div>
             </div>
@@ -43,8 +60,7 @@
 
          <!-- Main Content -->
           <div class="container">
-            <div class="row">
-                <h2 class="home-title text-center">Welcome to Shop Cart</h2>
+             <div class="row">
                 <div class="category-list d-flex flex-row justify-content-between align-items-center" id="categoryList">
 
                     
@@ -52,13 +68,61 @@
                      
                 
                 <div class="category-item d-flex align-items-center justify-content-center">
-                       <a href="productList.html">All Products </a>
+                       <a href="productList.html">All Products</a>
                      </div>
                 </div>
-                <div class="category-title text-center"> Select a category to start shopping</div>
-            </div>
+             </div>
           </div>
 
+
+          <!-- Carousel -->
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/EOSS_Desktop_Banner-2_3184fd3f-754f-4955-b130-84772092b8db.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/Exclusive_collection-Desktop_e1d438bd-1d24-4577-a34e-219707d5c249.webp" class="d-block w-100"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/NEW_ARRIVALS_-_DESKTOP_BANNER.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/open_Footwear_1.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/Womens_1.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+
+
+          <!-- Custom Divider -->
+           <div class="custom-divider"></div>
 
     </div>
         
