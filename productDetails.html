@@ -11,71 +11,82 @@
 </head>
 
 <body>
+    <div class=" loader-backdrop" id="loader-backdrop">
+        <div class="loader">
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    
 
     <div id="productDetailsPage">
 
 
-         <!-- Header -->
-         <nav id="header">
+        <!-- Header -->
+        <nav id="header">
             <div class="container">
                 <div class="row">
                     <div class="header-wrapper d-flex justify-content-between">
-                     <!--  I have made this div flex , with justify content as space between -->
-                       <div class="logo d-inline-block">
-                        <a href="index.html" class="text-decoration-none">StepNStyle</a>
-                       </div>
-                       <div class="user-actions d-flex flex-row">
-                        <a href="cart.html" class="">Cart</a>
-                        <div class="user-intro" id="userIntro">Hi user</div>
-                        <div class="logout-btn" id="logoutBtn">Logout</div>
-                       </div>
+                        <!--  I have made this div flex , with justify content as space between -->
+                        <div class="logo d-inline-block">
+                            <a href="index.html" class="text-decoration-none">Shop Cart</a>
+                        </div>
+                        <div class="user-actions d-flex flex-row">
+                            <a href="cart.html" class="">Cart</a>
+                            <div class="user-intro" id="userIntro">Hi user</div>
+                            <div class="logout-btn" id="logoutBtn">Logout</div>
+                        </div>
                     </div>
                 </div>
             </div>
-         </nav>
+        </nav>
 
 
 
-         <div class="container">
-                <div class="product-details-wrapper justify-content-between align-items-start d-flex flex-row">
-                    <div class="product-img d-flex">
-                        <img src="img/1_288da67a-34bf-4fb9-b527-5117b652abff.webp" alt="">
-                    </div>
-                    <div class="product-details-box d-flex flex-column">
-                        <div id="productDetails">
-                            <!--  product details -->
-                        <div class="product-name">FLASH White Men's Sneakers</div>
-                        <div class="product-price ">
-                            <span class="fw-bold">PRICE Rs. 1,309.00</span>
-                            <span class="ps-3">M.R.PRs. <del>1,799.00</del></span>
-                        </div>
-                        </div>
-                        <div class="product-description">
-                            <div class="product-description-title fw-bold">Description</div>
-                            <div class="product-description-data">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati blanditiis sit mollitia necessitatibus ducimus incidunt est saepe. Corporis, qui illo. Explicabo fugit totam similique eius, corrupti id? Temporibus, illum rerum.        
-                            </div>
-                        </div>
-
-
-                        <div class="product-details-action btn btn-primary text-decoration-none">
-                            Add to cart
-                        </div>
-                        <a href="cart.html" id="goToCartBtn" class="product-details-action btn btn-warning text-decoration-none">Go to cart</a>
-                    </div>
+        <div class="container">
+            <div class="product-details-wrapper justify-content-between align-items-start d-flex flex-row">
+                <div class="product-img d-flex" >
+                    <img id="product-img" src="" alt="product image">
                 </div>
 
-         </div>
+
+                <div class="product-details-box d-flex flex-column">
+                    <div id="productDetails">
+                        <!--  product details -->
+                        <div class="product-name" id="product-name"></div>
+                        <div class="product-price fw-bold" id="product-price"></div>
+                    </div>
+                    <div class="product-description">
+                        <div class="product-description-title fw-bold">Description</div>
+                        <div class="product-description-data" id="product-description-data">
+                        </div>
+                    </div>
+
+
+                    <div class="product-details-action btn btn-primary text-decoration-none">
+                        Add to cart
+                    </div>
+                    <a href="cart.html" id="goToCartBtn"
+                        class="product-details-action btn btn-warning text-decoration-none">Go to cart</a>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/productDetails.js"></script>
 </body>
 
 </html>

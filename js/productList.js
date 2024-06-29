@@ -31,10 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   async function popuplateProducts(flag, customProducts) {
     let product = customProducts;
-
-    //   queryParams for different categories
-    const queryParams = new URLSearchParams(window.location.search);
-    const queryParamsObject = Object.fromEntries(queryParams.entries());
+    const queryParamsObject = getQueryParams()
     if (flag == false) {
       if (queryParamsObject["category"]) {
         product = await fetchProductsByCategory(queryParamsObject["category"]);
@@ -53,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         "text-decoration-none",
         "d-inline-block"
       );
-      productItem.href = "productDetails.html";
+      productItem.href = `productDetails.html?id=${product.id}`;
 
       const productImage = document.createElement("div");
       const productName = document.createElement("div");
@@ -95,12 +92,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   async function downloadContentAndPopulate() {
-    Promise.all([popuplateProducts(false) , populateCategories()]).then(()=>{
-      const loaderBackdrop = document.getElementById("loader-backdrop");
-      loaderBackdrop.style.display = "none";
-    })
+    Promise.all([popuplateProducts(false), populateCategories() ]).then(() => {
+     removeLoader()
+    });
   }
-  downloadContentAndPopulate()
+  downloadContentAndPopulate();
 
   const filterSearch = document.getElementById("search");
   filterSearch.addEventListener("click", async () => {
