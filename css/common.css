@@ -51,3 +51,43 @@
 #header .header-wrapper .user-actions a:hover{
     text-decoration: underline;
 }
+
+
+.loader-backdrop{
+    background-color: rgba(0, 0, 0, 0.7);    
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    z-index: 2;
+}
+
+.loader > div {
+    border: 5px solid red;
+    width: 5rem;
+    height: 5rem;
+    border-top: 5px solid #f0eeeb;
+    border-bottom: 5px solid #f0eeeb;
+    border-radius: 50%;
+    animation:  spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+    from{
+        transform: rotate(0)
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}

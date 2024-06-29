@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return response.data;
   }
 
-
   // fetching the categories..
   async function fetchCategories() {
     // this function is marked async so this will also return a promise
@@ -82,21 +81,26 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // populating the categories list on the categoryList filter part
-  async function populateCtaegories() {
+  async function populateCategories() {
     const categories = await fetchCategories();
     const categoryList = document.getElementById("categoryList");
-    categories.forEach(category => {
-      const categoryLink = document.createElement('a');
-      categoryLink.classList.add("d-flex" , "text-decoration-none");
+    categories.forEach((category) => {
+      const categoryLink = document.createElement("a");
+      categoryLink.classList.add("d-flex", "text-decoration-none");
       categoryLink.textContent = category;
-      categoryLink.href = `productList.html?category=${category}`
+      categoryLink.href = `productList.html?category=${category}`;
 
       categoryList.appendChild(categoryLink);
     });
   }
 
-  popuplateProducts(false);
-  populateCtaegories();
+  async function downloadContentAndPopulate() {
+    Promise.all([popuplateProducts(false) , populateCategories()]).then(()=>{
+      const loaderBackdrop = document.getElementById("loader-backdrop");
+      loaderBackdrop.style.display = "none";
+    })
+  }
+  downloadContentAndPopulate()
 
   const filterSearch = document.getElementById("search");
   filterSearch.addEventListener("click", async () => {
