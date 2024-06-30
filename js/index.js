@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   populateProducts(products); // Populate products based on fetched data
-
   removeLoader(); // Hide loader when content is loaded
 });
 

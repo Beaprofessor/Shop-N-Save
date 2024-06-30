@@ -72,11 +72,13 @@ color: rgb(120, 122, 124);
     color: red;
 }
 
+#viewAll{
+    color: #232323;
+}
 
 #viewAll:hover{
-    color: black;
-    background-color: black;
-
+    color: red;
+    text-decoration: underline  !important;
 }
 
 
@@ -118,9 +120,9 @@ img{
     padding-bottom: 10px;
 }
 
-#categoryProducts .product-item:nth-child(3n) {
-/* margin-right: ; */
-}
+/* #categoryProducts .product-item:nth-child(3n) {
+margin-right: 100px;
+} */
 
 #categoryProducts .product-item:hover{
     box-shadow: 10px 10px 10px var(--blue-gray);
