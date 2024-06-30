@@ -7,6 +7,7 @@
     <title>Shop Cart</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/productList.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 
@@ -59,16 +60,18 @@
 
 
          <!-- Main Content -->
-          <div class="fixed-bottom " id="categoryItems">
+          <div id="categoryItems">
              <div class="row">
                 <div class="category-list d-flex flex-row justify-content-center  align-items-center" id="categoryList">
 
                     
-                <!-- List of Categories  -->
+                      <!-- List of Categories  -->
                      
-                <div class="category-item d-flex align-items-center justify-content-center">
-                       <a href="productList.html">All Products</a>
+                      <div class="category-item d-flex align-items-center justify-content-center">
+                           <a href="productList.html">All Products</a>
                      </div>
+
+
                 </div>
              </div>
           </div>  
@@ -103,11 +106,12 @@
 
           
            <!-- Lets populate some Category products on homepage -->
-            <div class="container">
+          
+             <div class="container">
                   <div class="row">
-                      <!-- Here the category name will be printed -->
-                       
-                      <div class="category-name d-flex flex-row justify-content-center fs-3">
+
+                      <!-- Here the category name will be printed -->   
+                      <div class="category-name d-flex flex-row justify-content-center fs-3 mt-4">
                         <div id="arrow">
                           <img src="icons/left-chevron.png" alt="">
                         </div>
@@ -117,18 +121,40 @@
                         </div>
                       </div>
     
-
-                    <div class="category-view-all f  d-flex mt-2 flex-row justify-content-center">
-                      View all
-                    </div>
+                         <!-- View all part -->
+                     <div class="category-view-all f  d-flex mt-2 flex-row justify-content-center">
+                      <a href="productList.html" class="text-decoration-none">View All</a>
+                     </div>
                     
-                    <!-- Here the products will be shown. -->
-                    <div class="category-items"></div>
+
+                    <!-- Here the products will be populated -->
+                    <div class="category-items" id="categoryProducts">
+
+                           <!-- Creating Products -->
+                           <!-- <a href="productDetails.html" target="_blank"
+                           class="product-item text-decoration-none d-inline-block">
+                           <div class="product-img">
+                               <img src="img/1_288da67a-34bf-4fb9-b527-5117b652abff.webp" alt="">
+                           </div>
+                           <div class="product-name text-center">FLASH White Men's Sneakers</div>
+                           <div class="product-price text-center">
+                               <span class="fw-bold">$139</span>
+                               <span class="ps-3">M.R.P $<del>179</del></span>
+                           </div>
+                           </a> -->
+
+
+                           <!-- Now I will be copying the products -->
+                           
+
+
+
+                           
+                    </div>
                   </div>
             </div>
 
 
-
            <div class="custom-divider"></div>
 
            <div class="custom-divider"></div>
@@ -137,21 +163,6 @@
 
            <div class="custom-divider"></div>
 
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
-
-           <div class="custom-divider"></div>
 
 
     </div>
@@ -161,7 +172,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

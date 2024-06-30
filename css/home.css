@@ -19,9 +19,9 @@
 #categoryItems{
     position: sticky;
     top: 86px;
-    /* height: 50px; */
-    border-top: 1px solid rgb(118, 122, 126) ;
-    border-bottom: 1px solid rgb(120, 122, 124) ;
+    z-index: 1000;
+    border-top: 1px solid rgb(178, 182, 187) ;
+    border-bottom: 1px solid rgb(178, 182, 187) ;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -30,7 +30,8 @@
 }
 
 #categoryList{
-/* margin-top: 1rem; */
+margin-top: 0;
+margin-bottom: 0;
 background-color: white;
 color: rgb(120, 122, 124);
 }
@@ -39,20 +40,18 @@ color: rgb(120, 122, 124);
     /* border: 1px solid var(--pale-blue); */
     /* box-shadow: 4px 4px 2px var(--mid-gray); */
     /* width: 125px; */
-    margin: 0px 15px;
+    margin: 10px 15px;
     padding: 5px 15px;
     border-radius: 100px;
     text-align: center;
     min-width: 35px;
-    min-height: 55px;
+    min-height: 0px;
 }
 
 .category-item:hover{
     /* box-shadow: 0px 0px; */
     /* transition: box-shadow 0.15s linear 0s; */
     color: red;
-    
-
 }
 
 .category-item a {
@@ -71,4 +70,54 @@ color: rgb(120, 122, 124);
 #arrow:hover{
     cursor: pointer;
     color: red;
+}
+
+
+
+
+#categoryProducts{
+    flex-basis: 100%; 
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+ } 
+#categoryProducts .product-item{
+    width: 20%;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 5px var(--light-gray);
+    padding: 0.5rem;
+}
+
+.product-img{
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.product-list-box .product-item .product-name{
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.3rem 0;
+}
+
+.product-list-box .product-item .product-price{
+    color: var(--jean-blue);
+    padding-bottom: 10px;
+}
+
+.product-list-box .product-item:nth-child(3n) {
+margin-right: 0;
+}
+
+.product-list-box .product-item:hover{
+    box-shadow: 0px 4px 10px var(--blue-gray);
+    transition: box-shadow  0.15s linear 0s;
 }

@@ -1,4 +1,4 @@
-console.log("Loaded ProductList JS");
+// console.log("Loaded ProductList JS");
 
 document.addEventListener("DOMContentLoaded", async () => {
   // fetching the API for all products
