@@ -24,23 +24,35 @@
 
 
         <!-- Header -->
-        <nav id="header">
-            <div class="container">
+        <nav id="header" class="sticky-top">
+            <div class="container ">
                 <div class="row">
-                    <div class="header-wrapper d-flex justify-content-between">
-                        <!--  I have made this div flex , with justify content as space between -->
-                        <div class="logo d-inline-block">
-                            <a href="index.html" class="text-decoration-none">Shop Cart</a>
-                        </div>
-                        <div class="user-actions d-flex flex-row">
-                            <a href="cart.html" class="">Cart</a>
-                            <div class="user-intro" id="userIntro">Hi user</div>
+                    <div class="header-wrapper d-flex align-items-center justify-content-between">
+
+                     <!--  I have made this div flex , with justify content as space between -->
+                       
+                      <div class="logo d-inline-block">
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          </form>
+                      </div>
+
+                      <!--  Logo or brandName -->
+                       <div class="logo">
+                        <a href="index.html" class="text-decoration-none " >Shop Cart</a>
+                       </div>
+
+                       <!-- Navbar items -->
+                       <div class="user-actions d-flex flex-row justify-content-center">
+                           <a href="cart.html" class="">Cart</a>
+                           <div class="user-intro" id="userIntro">Hi user</div>
                             <div class="logout-btn" id="logoutBtn">Logout</div>
-                        </div>
+                       </div>
+
                     </div>
                 </div>
             </div>
-        </nav>
+         </nav>
 
 
         <div class="container">
