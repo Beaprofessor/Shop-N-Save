@@ -85,8 +85,8 @@ color: rgb(120, 122, 124);
 #categoryProducts{
     flex-basis: 100%; 
     margin: 30px 50px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
  } 
 #categoryProducts .product-item{
     width: 20%;
@@ -95,12 +95,12 @@ color: rgb(120, 122, 124);
     margin-bottom: 30px;
     box-shadow: 0px 1px 5px var(--light-gray);
     padding: 0.5rem;
+
 }
 
 .product-img{
     height: 200px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
 }
 
 img{
