@@ -31,82 +31,84 @@ async function populateCategories() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-      const queryParamsObject = getQueryParams();
-      let products;
-  
-      if (queryParamsObject["category"]) {
-        products = await fetchProductsByCategory(queryParamsObject["category"]);
-      } else {
-        products = await fetchProducts();
-      }
-  
-      populateProducts(products); // Populate products based on fetched data
-  
-      removeLoader(); // Hide loader when content is loaded
-  });
-  
-  async function fetchProducts() {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    return data;
-  }
-  
-  async function fetchProductsByCategory(category) {
-    const response = await fetch(`https://fakestoreapi.com/products/category/${category}`);
-    const data = await response.json();
-    return data;
-  }
-  
-  function populateProducts(products) {
-    const categoryProducts = document.getElementById("categoryProducts");
-    categoryProducts.innerHTML = ""; // Clear previous content
-    const limitedProducts = products.slice(0, 8);
-  
-    limitedProducts.forEach((product) => {
-      const productItem = document.createElement("a");
-      productItem.target = "_blank";
-      productItem.classList.add(
-        "product-item",
-        "text-decoration-none",
-        "d-inline-block"
-      );
-      productItem.href = `productDetails.html?id=${product.id}`;
-  
-      const productImage = document.createElement("div");
-      const productName = document.createElement("div");
-      const productPrice = document.createElement("div");
-  
-      const imageInsideProductImage = document.createElement("img");
-      imageInsideProductImage.src = product.image;
-  
-      productImage.classList.add("product-img");
-      productName.classList.add("product-name", "text-center");
-      productPrice.classList.add("product-price", "text-center");
+  await populateCategories();
+  const queryParamsObject = getQueryParams();
+  let products;
 
-      productName.textContent = product.title.substring(0, 20);
-      productPrice.textContent = ` $${product.price}`;
-  
-      productImage.appendChild(imageInsideProductImage);
-      productItem.appendChild(productImage);
-      productItem.appendChild(productName);
-      productItem.appendChild(productPrice);
-  
-      categoryProducts.appendChild(productItem);
-    });
+  if (queryParamsObject["category"]) {
+    products = await fetchProductsByCategory(queryParamsObject["category"]);
+  } else {
+    products = await fetchProducts();
   }
-  
-  function removeLoader() {
-    const loaderBackdrop = document.getElementById("loader-backdrop");
-    loaderBackdrop.style.display = "none"; // Hide loader when content is loaded
+
+  populateProducts(products); // Populate products based on fetched data
+
+  removeLoader(); // Hide loader when content is loaded
+});
+
+async function fetchProducts() {
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+  return data;
+}
+
+async function fetchProductsByCategory(category) {
+  const response = await fetch(
+    `https://fakestoreapi.com/products/category/${category}`
+  );
+  const data = await response.json();
+  return data;
+}
+
+function populateProducts(products) {
+  const categoryProducts = document.getElementById("categoryProducts");
+  categoryProducts.innerHTML = ""; // Clear previous content
+  const limitedProducts = products.slice(0, 8);
+
+  limitedProducts.forEach((product) => {
+    const productItem = document.createElement("a");
+    productItem.target = "_blank";
+    productItem.classList.add(
+      "product-item",
+      "text-decoration-none",
+      "d-inline-block"
+    );
+    productItem.href = `productDetails.html?id=${product.id}`;
+
+    const productImage = document.createElement("div");
+    const productName = document.createElement("div");
+    const productPrice = document.createElement("div");
+
+    const imageInsideProductImage = document.createElement("img");
+    imageInsideProductImage.src = product.image;
+
+    productImage.classList.add("product-img");
+    productName.classList.add("product-name", "text-center");
+    productPrice.classList.add("product-price", "text-center");
+
+    productName.textContent = product.title.substring(0, 20);
+    productPrice.textContent = ` $${product.price}`;
+
+    productImage.appendChild(imageInsideProductImage);
+    productItem.appendChild(productImage);
+    productItem.appendChild(productName);
+    productItem.appendChild(productPrice);
+
+    categoryProducts.appendChild(productItem);
+  });
+}
+
+function removeLoader() {
+  const loaderBackdrop = document.getElementById("loader-backdrop");
+  loaderBackdrop.style.display = "none"; // Hide loader when content is loaded
+}
+
+function getQueryParams() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const params = {};
+  for (let [key, value] of urlParams) {
+    params[key] = value;
   }
-  
-  function getQueryParams() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const params = {};
-    for (let [key, value] of urlParams) {
-      params[key] = value;
-    }
-    return params;
-  }
-  
+  return params;
+}
