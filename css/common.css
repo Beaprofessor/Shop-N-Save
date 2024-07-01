@@ -34,6 +34,9 @@
 #header .header-wrapper .logo a {
     color: black;
     letter-spacing: 4px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
 }
 #header .header-wrapper .user-actions{
     font-size: 1rem;

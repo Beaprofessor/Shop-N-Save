@@ -51,13 +51,17 @@ color: rgb(120, 122, 124);
 .category-item:hover{
     /* box-shadow: 0px 0px; */
     /* transition: box-shadow 0.15s linear 0s; */
-    color: red;
 }
 
 .category-item a {
     color: black;
     text-decoration: none;
     font-size: 1rem;
+}
+
+.category-item a:hover{
+    color: red !important;
+    text-decoration: underline;
 }
 
 #arrow{
