@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   populateProducts(products); // Populate products based on fetched data
+  populateLatestProducts(products);
   removeLoader(); // Hide loader when content is loaded
 });
 
@@ -59,6 +60,7 @@ async function fetchProductsByCategory(category) {
   return data;
 }
 
+// Populating  products for the  
 function populateProducts(products) {
   const categoryProducts = document.getElementById("categoryProducts");
   categoryProducts.innerHTML = ""; // Clear previous content
@@ -96,6 +98,45 @@ function populateProducts(products) {
     categoryProducts.appendChild(productItem);
   });
 }
+
+function populateLatestProducts(products) {
+  const latestProducts = document.getElementById("latestArrivals");
+  latestProducts.innerHTML = ""; // Clear previous content
+  const limitedProducts = products.slice(8, 16);
+
+  limitedProducts.forEach((product) => {
+    const productItem = document.createElement("a");
+    productItem.target = "_blank";
+    productItem.classList.add(
+      "product-item",
+      "text-decoration-none",
+      "d-inline-block"
+    );
+    productItem.href = `productDetails.html?id=${product.id}`;
+
+    const productImage = document.createElement("div");
+    const productName = document.createElement("div");
+    const productPrice = document.createElement("div");
+
+    const imageInsideProductImage = document.createElement("img");
+    imageInsideProductImage.src = product.image;
+
+    productImage.classList.add("product-img");
+    productName.classList.add("product-name", "text-center");
+    productPrice.classList.add("product-price", "text-center");
+
+    productName.textContent = product.title.substring(0, 20);
+    productPrice.textContent = ` $${product.price}`;
+
+    productImage.appendChild(imageInsideProductImage);
+    productItem.appendChild(productImage);
+    productItem.appendChild(productName);
+    productItem.appendChild(productPrice);
+
+    latestProducts.appendChild(productItem);
+  });
+}
+
 
 function removeLoader() {
   const loaderBackdrop = document.getElementById("loader-backdrop");

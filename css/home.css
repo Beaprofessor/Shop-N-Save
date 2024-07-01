@@ -132,3 +132,52 @@ margin-right: 100px;
     box-shadow: 10px 10px 10px var(--blue-gray);
     transition: box-shadow  0.15s linear 0s;
 }
+
+
+
+
+/*  Latest Products */
+
+#latestArrivals{
+    flex-basis: 100%; 
+    margin: 30px 50px;
+    /* align-items: center; */
+    /* justify-content: center; */
+ } 
+#latestArrivals .product-item{
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 5px var(--light-gray);
+    padding: 0.5rem;
+
+}
+
+.product-img{
+    height: 200px;
+    display: flex;
+}
+
+img{
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#latestArrivals .product-item .product-name{
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.3rem 0;
+}
+
+#latestArrivals .product-item .product-price{
+    color: var(--jean-blue);
+    padding-bottom: 10px;
+}
+
+
+#latestArrivals .product-item:hover{
+    box-shadow: 10px 10px 10px var(--blue-gray);
+    transition: box-shadow  0.15s linear 0s;
+}
