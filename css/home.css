@@ -48,10 +48,10 @@ color: rgb(120, 122, 124);
     min-height: 0px;
 }
 
-.category-item:hover{
-    /* box-shadow: 0px 0px; */
-    /* transition: box-shadow 0.15s linear 0s; */
-}
+/* .category-item:hover{
+     box-shadow: 0px 0px; 
+     transition: box-shadow 0.15s linear 0s; 
+} */
 
 .category-item a {
     color: black;
