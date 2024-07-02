@@ -1,4 +1,4 @@
-.home-title{
+/* .home-title{
     font-size: 3.5rem;
     margin-top: 5rem;
     letter-spacing: 1rem;
@@ -28,4 +28,35 @@
     letter-spacing: 2px;
 
 }
+ */
+
+
+ /* Custom styles */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    margin-bottom: 30px;
+}
+
+#auth-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#auth-form a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
 

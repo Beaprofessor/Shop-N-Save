@@ -38,7 +38,6 @@
                        <div class="user-actions d-flex flex-row justify-content-center">
                            <a href="cart.html" class="">Cart</a>
                            <div class="user-intro" id="userIntro">Hi user</div>
-                            <div class="logout-btn" id="logoutBtn">Logout</div>
                        </div>
 
                     </div>
@@ -47,7 +46,7 @@
          </nav>
 
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <h2 class="home-title , text-center">
                     Welcome to Shop Cart
@@ -68,20 +67,64 @@
                     Don't have an Account ? Sign Up
                 </div>
             </div>
+        </div> -->
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <!-- Card for Login/Signup -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center" id="form-title">Login</h3>
+                            <form id="auth-form">
+                                <!-- Login Form -->
+                                <div id="login-form">
+                                    <div class="form-group">
+                                        <label for="login-email">Email</label>
+                                        <input type="email" class="form-control" id="login-email" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="login-password">Password</label>
+                                        <input type="password" class="form-control" id="login-password" placeholder="Enter password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    <p class="text-center mt-3">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+                                </div>
+    
+                                <!-- Signup Form -->
+                                <div id="signup-form" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="signup-username">Username</label>
+                                        <input type="text" class="form-control" id="signup-username" placeholder="Enter username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signup-email">Email</label>
+                                        <input type="email" class="form-control" id="signup-email" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signup-password">Password</label>
+                                        <input type="password" class="form-control" id="signup-password" placeholder="Enter password">
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">Sign up</button>
+                                    <p class="text-center mt-3">Already have an account? <a href="#" id="show-login">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
 
     </div>
 
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
