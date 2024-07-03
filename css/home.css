@@ -16,6 +16,10 @@
     text-align: center;
 }
 
+.user-actions a:hover{
+      color: red  !important;
+}
+
 #categoryItems{
     position: sticky;
     top: 86px;
@@ -180,4 +184,13 @@ img{
 #latestArrivals .product-item:hover{
     box-shadow: 10px 10px 10px var(--blue-gray);
     transition: box-shadow  0.15s linear 0s;
+}
+
+
+
+/* Footer */
+
+#footerji > footer > .row > div > ul > li :hover {
+   color: red !important;
+   text-decoration: underline !important;
 }
