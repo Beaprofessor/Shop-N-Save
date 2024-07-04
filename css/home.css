@@ -188,9 +188,3 @@ img{
 
 
 
-/* Footer */
-
-#footerji > footer > .row > div > ul > li :hover {
-   color: red !important;
-   text-decoration: underline !important;
-}

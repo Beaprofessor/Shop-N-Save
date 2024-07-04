@@ -100,6 +100,14 @@
 
 
 .custom-divider{
-    height: 2rem;
+    height: 3rem;
     background-color: #ffffff;
 }
+
+
+/* Footer */
+
+#footerji > footer > .row > div > ul > li :hover {
+    color: red !important;
+    text-decoration: underline !important;
+ }
