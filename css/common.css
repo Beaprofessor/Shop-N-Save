@@ -9,35 +9,43 @@
     --light-gray: #ccc;
 }
 
-#html{
+#html {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
-*,*::before , *::after{
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
 
-#header{
-  background-color: white;
-  /* padding: 1.2rem 0; */
-  position:sticky;
-  top: 0px;
-  margin: 0%;
+#header {
+    background-color: white;
+    /* padding: 0.5rem 0; */
+    position: sticky;
+    top: 0px;
+    margin: 0;
+    z-index: 1000;
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 
 .logo {
-  font-size: 1.9rem;
-  font-weight: 600;
-  text-align: center;
-}
-.user-actions > ul {
-  gap: 15px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    /* text-align: center; */
 }
 
-.user-actions > ul :hover{
-    color: red  !important;
+.user-actions>ul {
+    gap: 15px;
+}
+
+.user-actions>ul :hover {
+    color: red !important;
     text-decoration: underline;
 }
 
@@ -75,8 +83,8 @@
 } */
 
 
-.loader-backdrop{
-    background-color: rgba(0, 0, 0, 0.7);    
+.loader-backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0.3;
     height: 100%;
     width: 100%;
@@ -87,35 +95,35 @@
     z-index: 10000;
 }
 
-.loader{
+.loader {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5rem;
 }
 
-.loader > div {
+.loader>div {
     border: 5px solid red;
     width: 5rem;
     height: 5rem;
     border-top: 5px solid #f0eeeb;
     border-bottom: 5px solid #f0eeeb;
     border-radius: 50%;
-    animation:  spinner 2s linear infinite;
+    animation: spinner 2s linear infinite;
 }
 
 @keyframes spinner {
-    from{
+    from {
         transform: rotate(0)
     }
 
-    to{
+    to {
         transform: rotate(360deg);
     }
 }
 
 
-.custom-divider{
+.custom-divider {
     height: 3rem;
     background-color: #ffffff;
 }
@@ -123,45 +131,47 @@
 
 /* Footer */
 
-  /* Custom CSS for additional styling */
-  .footer-content {
+/* Custom CSS for additional styling */
+.footer-content {
     margin-bottom: 20px;
-  }
+}
 
-  /* Ensure the text does not wrap */
-  #footerji footer .row > div > ul > li > a {
+/* Ensure the text does not wrap */
+#footerji footer .row>div>ul>li>a {
     white-space: nowrap;
-  }
+}
 
-  .footer-content h5 {
+.footer-content h5 {
     margin-bottom: 15px;
-    white-space: nowrap; /* Prevent text from wrapping */
-  }
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
 
-  /* Adjusting the spacing and centering */
-  .footer-content .col-md-2,
-  .footer-content .col-md-4 {
-     margin: 0 45px;        /* Reduce the gap between columns */
-  }
+/* Adjusting the spacing and centering */
+.footer-content .col-md-2,
+.footer-content .col-md-4 {
+    margin: 0 45px;
+    /* Reduce the gap between columns */
+}
 
-  /* Centering the footer content */
-  #footerji {
+/* Centering the footer content */
+#footerji {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .footer-inner {
+.footer-inner {
     display: flex;
     justify-content: center;
     width: 100%;
     /* max-width: 1000px; You can adjust the max-width as needed */
-  }
+}
 
-  /* Hover effect for footer links */
-  #footerji footer .footer-content > div > ul > li > a:hover {
+/* Hover effect for footer links */
+#footerji footer .footer-content>div>ul>li>a:hover {
     color: red !important;
     text-decoration: underline !important;
-  }
+}
 
 
 
@@ -170,36 +180,39 @@
 /* Code for making it responsive */
 
 @media (max-width: 767.98px) {
-  /* Move logo to the left */
-  #header .header-wrapper .logo {
-      order: 1;
-      margin-left: 0;
-  }
 
-  /* Hide search bar and navbar items */
-  #header #search, #header .user-actions {
-      display: none !important;
-  }
+    /* Move logo to the left */
+    #header .header-wrapper .logo {
+        order: 1;
+        margin-left: 0;
+    }
 
-  /* Display hamburger menu */
-  #header .hamburger-menu .navbar-toggler {
-      display: inline-block;
-  }
+    /* Hide search bar and navbar items */
+    #header #search,
+    #header .user-actions {
+        display: none !important;
+    }
 
-  /* Style for collapsible navbar in small screens */
-  #navbarNav {
-      width: 100%;
-      background-color: white;
-      display: none; /* Start hidden */
-  }
+    /* Display hamburger menu */
+    #header .hamburger-menu .navbar-toggler {
+        display: inline-block;
+    }
 
-  /* Display the navbar when toggler is clicked */
-  .navbar-toggler.collapsed + #navbarNav {
-      display: block;
-  }
-  
-  #navbarNav .nav-item {
-      text-align: center;
-      padding: 0.5rem 0;
-  }
+    /* Style for collapsible navbar in small screens */
+    #navbarNav {
+        width: 100%;
+        background-color: white;
+        display: none;
+        /* Start hidden */
+    }
+
+    /* Display the navbar when toggler is clicked */
+    .navbar-toggler.collapsed+#navbarNav {
+        display: block;
+    }
+
+    #navbarNav .nav-item {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
 }
