@@ -1,6 +1,6 @@
 #categoryItems{
-    /* position: sticky; */
-    top: 87px;
+    position: sticky;
+    top: 70px;
     /* z-index: 1000; */
     border-top: 1px solid rgb(178, 182, 187) ;
     border-bottom: 1px solid rgb(178, 182, 187) ;
@@ -15,7 +15,7 @@
 margin-top: 0;
 margin-bottom: 0;
 background-color: white;
-color: rgb(120, 122, 124);
+color: rgb(120, 122, 124) !important;
 }
 
 .category-item{
