@@ -1,26 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const logoutButton = document.getElementById('logout-button');
-
-    // Logout logic
-    logoutButton.addEventListener('click', () => {
-        // Clear user data from localStorage
-        localStorage.removeItem('username');
-        localStorage.removeItem('email');
-        localStorage.removeItem('password');
-
-        // Redirect to login page
-        window.location.href = 'index.html';
-    });
-
-    // Check if user is not logged in and redirect to login page
-    if (!localStorage.getItem('email') || !localStorage.getItem('password')) {
-        window.location.href = 'index.html';
-    }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const signupForm = document.getElementById('signup-form');
     const showSignupLink = document.getElementById('show-signup');
@@ -67,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const username = document.getElementById('signup-username').value;
             const email = document.getElementById('signup-email').value;
             const password = document.getElementById('signup-password').value;
+
+            // Check if all fields are filled
+            if (!username || !email || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
 
             // Save credentials to localStorage
             localStorage.setItem('username', username);

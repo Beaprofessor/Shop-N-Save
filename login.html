@@ -15,35 +15,33 @@
     <div id="loginPage">
 
 
-        <!-- Header -->
-        <nav id="header" class="sticky-top">
-            <div class="container ">
-                <div class="row">
-                    <div class="header-wrapper d-flex align-items-center justify-content-between">
-
-                     <!--  I have made this div flex , with justify content as space between -->
-                       
-                      <div class="logo d-inline-block">
-                          <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          </form>
-                      </div>
-
-                      <!--  Logo or brandName -->
-                       <div class="logo">
-                        <a href="index.html" class="text-decoration-none " >Shop Cart</a>
-                       </div>
-
-                       <!-- Navbar items -->
-                       <div class="user-actions d-flex flex-row justify-content-center">
-                           <a href="cart.html" class="">Cart</a>
-                           <div class="user-intro" id="userIntro">Hi user</div>
-                       </div>
-
-                    </div>
-                </div>
-            </div>
-         </nav>
+        <!-- Header  or Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="header">
+        <div class="container align-items-center">
+  
+          <!-- Brand Name or logo -->
+          <a class="navbar-brand logo" href="index.html">Shop Cart</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- User actions and search bar  -->
+          <div class="collapse navbar-collapse user-actions" id="navbarSupportedContent">
+            <ul class="navbar-nav  ms-auto me-5  mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cart.html">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hi User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+  
+        </div>
+      </nav>
 
 
         <!-- <div class="container">
@@ -69,6 +67,8 @@
             </div>
         </div> -->
 
+
+        <!-- Login Form / SignUp Form -->
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
@@ -90,18 +90,18 @@
                                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                                     <p class="text-center mt-3">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
                                 </div>
-    
+        
                                 <!-- Signup Form -->
                                 <div id="signup-form" style="display: none;">
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="signup-username">Username</label>
                                         <input type="text" class="form-control" id="signup-username" placeholder="Enter username">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="signup-email">Email</label>
                                         <input type="email" class="form-control" id="signup-email" placeholder="Enter email">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="signup-password">Password</label>
                                         <input type="password" class="form-control" id="signup-password" placeholder="Enter password">
                                     </div>
@@ -114,7 +114,10 @@
                 </div>
             </div>
         </div>
-
+        
+        
+        
+        
 
 
     </div>

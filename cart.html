@@ -25,35 +25,36 @@
 
 
         <!-- Header -->
-        <nav id="header" class="sticky-top">
-            <div class="container ">
-                <div class="row">
-                    <div class="header-wrapper d-flex align-items-center justify-content-between">
+         <!-- Header  or Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="header">
+      <div class="container align-items-center">
 
-                        <!--  I have made this div flex , with justify content as space between -->
+        <!-- Brand Name or logo -->
+        <a class="navbar-brand logo" href="index.html">Shop Cart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                        <div class="logo d-inline-block">
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+        <!-- User actions and search bar  -->
+        <div class="collapse navbar-collapse user-actions" id="navbarSupportedContent">
+          <ul class="navbar-nav  ms-auto me-5  mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="cart.html">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hi User</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
 
-                        <!--  Logo or brandName -->
-                        <div class="logo">
-                            <a href="index.html" class="text-decoration-none ">Shop Cart</a>
-                        </div>
-
-                        <!-- Navbar items -->
-                        <div class="user-actions d-flex flex-row justify-content-center">
-                            <a href="cart.html" class="">Cart</a>
-                            <div class="user-intro" id="userIntro">Hi user</div>
-                            <div class="logout-btn" id="logoutBtn">Logout</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </nav>
+      </div>
+    </nav>
 
 
         <div class="container">
@@ -117,73 +118,61 @@
         <div class="custom-divider"></div>
 
 
-        <!-- Footer -->
 
-        <div class="container " id="footerji">
-            <footer class="justify-content-center align-items-center">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-2">
-                  <h5>What's In Store</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="productList.html" class="nav-link p-0 text-muted">All Products</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Electronics</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Jewelery</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Men's Clothing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Women's Clothing</a></li>
-                  </ul>
-                </div>
-      
-                <div class="col-2">
-                  <h5>Company Info & Policies</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ's</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy & Cookies Policy</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Return/Exchange</a></li>
-                  </ul>
-                </div>
-      
-                <!-- <div class="col-2">
-                  <h5>Section</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                  </ul>
-                </div> -->
-      
-                <div class="col-4 offset-1">
-                  <form>
-                    <h5>Subscribe to our newsletter</h5>
-                    <p>Monthly digest of whats new and exciting from us.</p>
-                    <div class="d-flex w-100 gap-2">
-                      <label for="newsletter1" class="visually-hidden">Email address</label>
-                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                      <button class="btn btn-primary" type="button">Subscribe</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-      
-              <div class="d-flex justify-content-center py-4 my-4 border-top">
-                <p>© 2021 Company, Inc. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#twitter"></use>
-                      </svg></a></li>
-                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#instagram"></use>
-                      </svg></a></li>
-                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#facebook"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-            </footer>
+         <!-- Footer -->
+
+    <div class="container" id="footerji">
+      <footer class="justify-content-center align-items-center">
+
+        <!-- Single Row for the Columns -->
+        <div class="row justify-content-between align-items-start footer-content">
+          <div class="col-md-2  col-sm-6 mb-3">
+            <h5>What's In Store</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="productList.html" class="nav-link p-0 text-muted">All Products</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Electronics</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Jewelery</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Men's Clothing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Women's Clothing</a></li>
+            </ul>
           </div>
+
+          <div class="col-md-2  col-sm-6 mb-4">
+            <h5>Company Info & Policies</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ's</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy & Cookies Policy</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Return/Exchange</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 offest-1 col-sm-12 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Part of the Footer -->
+        <div class="d-flex justify-content-center py-4 my-4 border-top">
+          <p>© 2021 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex ms-3">
+            <li class="ms-3"><a class="link-dark" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><i class="bi bi-facebook"></i></a></li>
+          </ul>
+        </div>
+
+      </footer>
+    </div>
 
     </div>
 
