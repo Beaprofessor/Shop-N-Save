@@ -102,7 +102,7 @@ function populateProducts(products) {
 function populateLatestProducts(products) {
   const latestProducts = document.getElementById("latestArrivals");
   latestProducts.innerHTML = ""; // Clear previous content
-  const limitedProducts = products.slice(8, 16);
+  const limitedProducts = products.slice(10, 18);
 
   limitedProducts.forEach((product) => {
     const productItem = document.createElement("a");
