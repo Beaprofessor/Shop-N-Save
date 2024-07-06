@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Remove horizontal scrollbar */
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 550px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.payment-option:hover {
+    background-color: #f8f9fa;
+}
+
+.payment-option img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+.payment-option span {
+    margin-right: 10px; /* Adjust margin between text and QR code */
+}
+
+
+
+.qrcode {
+    display: none; /* Initially hide QR code sections */
+    align-items:center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.qrcode.active {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center align items vertically */
+    justify-content: space-between; /* Center align items horizontally */
+
+}
+
+.qrcode h5 {
+    margin:0 20px; /* Adjust spacing */
+}
+
+.qrcode img {
+    max-width: 100%; /* Adjust QR code image width */
+    height: 60px;
+    width: 60px;
+}
+
+.total-amount {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
