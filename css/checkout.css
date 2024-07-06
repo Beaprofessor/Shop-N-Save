@@ -6,8 +6,8 @@ body {
 
 .container {
     max-width: 600px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -84,4 +84,43 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+}
+
+
+/* CSS for payment confirmation modal */
+#paymentConfirmationModal .modal-dialog {
+    margin:  auto;
+    width: auto; /* Adjust width if needed */
+    height: auto; /* Adjust height if needed */
+}
+
+/* CSS for QR Code modal */
+
+#qrModal {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#qrModal .modal-content {
+    /* display: block; */
+    margin: 150px auto;
+    width: 250px;
+    height: 325px;
+}
+
+#qrModal .close {
+    position: absolute;
+    top: 45px;
+    left: 450px;
+    color: #ae2525;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#qrModal .close:hover,
+#qrModal .close:focus {
+    color: #0b0101;
+    text-decoration: none;
+    cursor: pointer;
 }
