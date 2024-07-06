@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (email === storedEmail && password === storedPassword) {
                 alert('Login successful!');
                 // Redirect to protected page
-                window.location.href = 'protected.html';
+                window.location.href = 'index.html';
             } else {
                 alert('Invalid email or password.');
             }
